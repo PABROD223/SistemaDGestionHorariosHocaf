@@ -2,6 +2,7 @@ namespace HOCAF.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -18,8 +19,9 @@ namespace HOCAF.Models
         [Key]
         public int idDocumento { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="El nomnre del documento es obligatorio.")]
         [StringLength(20)]
+        [DisplayName("Nombre Del Documento")]
         public string nombreDocumento { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
