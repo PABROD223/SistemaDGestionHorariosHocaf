@@ -159,12 +159,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JornadaTipoFormacionsController.cs" />
+    <Compile Include="Controllers\TipoDocumentoesController.cs" />
+    <Compile Include="Controllers\TipoFormacionsController.cs" />
+    <Compile Include="Controllers\TrimestreActualsController.cs" />
+    <Compile Include="Controllers\TrimestresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201803042229128_PrimeraMigracion.cs" />
     <Compile Include="Migrations\201803042229128_PrimeraMigracion.Designer.cs">
       <DependentUpon>201803042229128_PrimeraMigracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.cs" />
+    <Compile Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.Designer.cs">
+      <DependentUpon>201803112211199_cambiotamañodedatotablaTipoDocumento.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
@@ -206,9 +215,7 @@
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ApplicationInsights.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -221,7 +228,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -235,6 +244,31 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Create.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Delete.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Details.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Edit.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Index.cshtml" />
+    <Content Include="Views\JornadaTipoFormacions\Create.cshtml" />
+    <Content Include="Views\JornadaTipoFormacions\Delete.cshtml" />
+    <Content Include="Views\JornadaTipoFormacions\Details.cshtml" />
+    <Content Include="Views\JornadaTipoFormacions\Edit.cshtml" />
+    <Content Include="Views\JornadaTipoFormacions\Index.cshtml" />
+    <Content Include="Views\Trimestres\Create.cshtml" />
+    <Content Include="Views\Trimestres\Delete.cshtml" />
+    <Content Include="Views\Trimestres\Details.cshtml" />
+    <Content Include="Views\Trimestres\Edit.cshtml" />
+    <Content Include="Views\Trimestres\Index.cshtml" />
+    <Content Include="Views\TrimestreActuals\Create.cshtml" />
+    <Content Include="Views\TrimestreActuals\Delete.cshtml" />
+    <Content Include="Views\TrimestreActuals\Details.cshtml" />
+    <Content Include="Views\TrimestreActuals\Edit.cshtml" />
+    <Content Include="Views\TrimestreActuals\Index.cshtml" />
+    <Content Include="Views\TipoFormacions\Create.cshtml" />
+    <Content Include="Views\TipoFormacions\Delete.cshtml" />
+    <Content Include="Views\TipoFormacions\Details.cshtml" />
+    <Content Include="Views\TipoFormacions\Edit.cshtml" />
+    <Content Include="Views\TipoFormacions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -250,6 +284,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803042229128_PrimeraMigracion.resx">
       <DependentUpon>201803042229128_PrimeraMigracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.resx">
+      <DependentUpon>201803112211199_cambiotamañodedatotablaTipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

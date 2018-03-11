@@ -17,9 +17,10 @@ namespace HOCAF.Models
 
         [Key]
         public int idDocumento { get; set; }
-
-        [Required]
-        [StringLength(20)]
+        
+        [Display(Name = "Nombre del Documento")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
+        [StringLength(30)]
         public string nombreDocumento { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

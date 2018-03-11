@@ -1,0 +1,42 @@
+﻿@model HOCAF.Models.JornadaTipoFormacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JornadaTipoFormacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Jornada.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jornada.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoFormacion.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoFormacion.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
