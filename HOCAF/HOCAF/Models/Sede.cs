@@ -18,15 +18,18 @@ namespace HOCAF.Models
         [Key]
         public int idSede { get; set; }
 
-        [Required]
+        [Display(Name = "Nombre de la sede")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]        
         [StringLength(50)]
         public string nombre { get; set; }
 
-        [Required]
+        [Display(Name = "Número de teléfono")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]        
         [StringLength(7)]
         public string telefono { get; set; }
 
-        [Required]
+        [Display(Name = "Dirección")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]       
         [StringLength(30)]
         public string direccion { get; set; }
 

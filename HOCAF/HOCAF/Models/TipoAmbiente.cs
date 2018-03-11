@@ -18,7 +18,8 @@ namespace HOCAF.Models
         [Key]
         public int idTipoAmbiente { get; set; }
 
-        [Required]
+        [Display(Name = "Nombre del ambiente")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 
