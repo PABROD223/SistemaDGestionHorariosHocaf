@@ -160,7 +160,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EspecialidadsController.cs" />
     <Compile Include="Controllers\EstadoFichasController.cs" />
+    <Compile Include="Controllers\AmbientesController.cs" />
+    <Compile Include="Controllers\DiasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SedesController.cs" />
+    <Compile Include="Controllers\TipoAmbientesController.cs" />
     <Compile Include="Controllers\JornadaTipoFormacionsController.cs" />
     <Compile Include="Controllers\TipoDocumentoesController.cs" />
     <Compile Include="Controllers\TipoFormacionsController.cs" />
@@ -305,6 +309,26 @@
     <Content Include="Views\EstadoFichas\Details.cshtml" />
     <Content Include="Views\EstadoFichas\Edit.cshtml" />
     <Content Include="Views\EstadoFichas\Index.cshtml" />
+    <Content Include="Views\Sedes\Create.cshtml" />
+    <Content Include="Views\Sedes\Delete.cshtml" />
+    <Content Include="Views\Sedes\Details.cshtml" />
+    <Content Include="Views\Sedes\Edit.cshtml" />
+    <Content Include="Views\Sedes\Index.cshtml" />
+    <Content Include="Views\TipoAmbientes\Create.cshtml" />
+    <Content Include="Views\TipoAmbientes\Delete.cshtml" />
+    <Content Include="Views\TipoAmbientes\Details.cshtml" />
+    <Content Include="Views\TipoAmbientes\Edit.cshtml" />
+    <Content Include="Views\TipoAmbientes\Index.cshtml" />
+    <Content Include="Views\Ambientes\Create.cshtml" />
+    <Content Include="Views\Ambientes\Delete.cshtml" />
+    <Content Include="Views\Ambientes\Details.cshtml" />
+    <Content Include="Views\Ambientes\Edit.cshtml" />
+    <Content Include="Views\Ambientes\Index.cshtml" />
+    <Content Include="Views\Dias\Create.cshtml" />
+    <Content Include="Views\Dias\Delete.cshtml" />
+    <Content Include="Views\Dias\Details.cshtml" />
+    <Content Include="Views\Dias\Edit.cshtml" />
+    <Content Include="Views\Dias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

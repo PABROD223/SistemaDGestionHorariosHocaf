@@ -18,7 +18,8 @@ namespace HOCAF.Models
         [Key]
         public int idDia { get; set; }
 
-        [Required]
+        [Display(Name = "Nombre del día")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 
