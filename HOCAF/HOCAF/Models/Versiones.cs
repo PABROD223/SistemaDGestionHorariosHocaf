@@ -16,16 +16,25 @@ namespace HOCAF.Models
 
         [Key]
         public int idVersion { get; set; }
-
-        [Required]
+        [Display(Name ="Nombre version")]
+        [Required(ErrorMessage ="Ingrese los datos para el campo{0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 
+        [Display(Name = "Estado de la version")]
         public bool estado { get; set; }
 
+        [Display(Name = "Fecha inicio Version")]
+        [Required(ErrorMessage = "ingrese la fecha recquerida para el campo {0}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [Column(TypeName = "date")]
         public DateTime fechaInicio { get; set; }
 
+        [Display(Name = "Fecha fin Version")]
+        [Required(ErrorMessage = "ingrese la fecha recquerida para el campo {0}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [Column(TypeName = "date")]
         public DateTime fechaFin { get; set; }
 
