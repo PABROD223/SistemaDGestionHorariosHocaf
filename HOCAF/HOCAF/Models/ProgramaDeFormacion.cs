@@ -17,20 +17,20 @@ namespace HOCAF.Models
         }
 
         [Key]
-        [Column(Order = 0)]
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idPrograma { get; set; }
 
-        [Required]
+        [Display(Name = "Nombre programa de formación")]
+        [Required(ErrorMessage = " Ingrese los datos para el campo {0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 
-        [Required]
+        [Display(Name = "Siglas del programa de formación")]
+        [Required(ErrorMessage = " Ingrese los datos para el campo {0}")]
         [StringLength(50)]
         public string siglas { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idEspecialidad { get; set; }
 

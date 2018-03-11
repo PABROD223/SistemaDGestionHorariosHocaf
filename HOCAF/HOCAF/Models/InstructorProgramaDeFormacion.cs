@@ -19,10 +19,6 @@ namespace HOCAF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idPrograma { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int idEspecialidad { get; set; }
 
         public bool estado { get; set; }
 

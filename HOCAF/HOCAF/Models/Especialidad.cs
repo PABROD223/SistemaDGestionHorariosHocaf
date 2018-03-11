@@ -18,10 +18,12 @@ namespace HOCAF.Models
         [Key]
         public int idEspecialidad { get; set; }
 
-        [Required]
+        [Display(Name = "Nombre de especialidad")]
+        [Required(ErrorMessage = "Ingrese los datos para el campo {0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 
+        [Display(Name = "Estado de la especialidad")]
         public bool estado { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

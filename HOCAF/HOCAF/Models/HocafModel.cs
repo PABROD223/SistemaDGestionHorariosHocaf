@@ -176,13 +176,13 @@
             modelBuilder.Entity<ProgramaDeFormacion>()
                 .HasMany(e => e.Ficha)
                 .WithRequired(e => e.ProgramaDeFormacion)
-                .HasForeignKey(e => new { e.idProgramaFormacion, e.idEspecialidadPF })
+        
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProgramaDeFormacion>()
                 .HasMany(e => e.InstructorProgramaDeFormacion)
                 .WithRequired(e => e.ProgramaDeFormacion)
-                .HasForeignKey(e => new { e.idPrograma, e.idEspecialidad })
+           
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Roles>()

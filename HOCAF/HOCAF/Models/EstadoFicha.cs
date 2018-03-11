@@ -18,7 +18,8 @@ namespace HOCAF.Models
         [Key]
         public int idEstado { get; set; }
 
-        [Required]
+        [Display(Name="Nombre estado de la ficha")]
+        [Required(ErrorMessage = "Ingrese los datos para el campo {0}")]
         [StringLength(50)]
         public string nombre { get; set; }
 

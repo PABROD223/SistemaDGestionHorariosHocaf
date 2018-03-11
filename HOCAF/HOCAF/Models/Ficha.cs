@@ -17,21 +17,34 @@ namespace HOCAF.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
+        [Display(Name= "Numero de ficha")]
+        [Required (ErrorMessage = "ingrese los datos para el campo {0}")]
         public int idFicha { get; set; }
 
+        [Display(Name = "Jornada")]
+        [Required(ErrorMessage = "ingrese los datos para el campo {0}")]
         public int idJornada { get; set; }
 
+        [Display(Name = "Estado de la ficha")]
+        [Required(ErrorMessage = "ingrese los datos para el campo {0}")]
         public int idEstadoFicha { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha inicio de formación")]
         [Column(TypeName = "date")]
         public DateTime fechaInicio { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha Fin de formación")]
         [Column(TypeName = "date")]
         public DateTime fechaFin { get; set; }
 
+        [Display(Name = "Programa de formación")]
+        [Required(ErrorMessage = "ingrese los datos para el campo {0}")]
         public int idProgramaFormacion { get; set; }
-
-        public int idEspecialidadPF { get; set; }
 
         public virtual EstadoFicha EstadoFicha { get; set; }
 

@@ -18,13 +18,19 @@ namespace HOCAF.Models
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
+        [Display(Name = "Jornada")]
         public int idJornada { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
+        [Display(Name = "Tipo de Formacion")]
         public int idTipoFormacion { get; set; }
 
+        [Display(Name = "Estado")]
+        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
         public bool estado { get; set; }
 
         public virtual Jornada Jornada { get; set; }
