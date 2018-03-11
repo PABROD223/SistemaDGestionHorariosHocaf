@@ -183,6 +183,14 @@
     <Compile Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.Designer.cs">
       <DependentUpon>201803112211199_cambiotamañodedatotablaTipoDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803112351062_Prueba.cs" />
+    <Compile Include="Migrations\201803112351062_Prueba.Designer.cs">
+      <DependentUpon>201803112351062_Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803112356296_prueba2.cs" />
+    <Compile Include="Migrations\201803112356296_prueba2.Designer.cs">
+      <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
     <Compile Include="Models\Dia.cs" />
@@ -318,6 +326,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803112321498_CabioRelacionProgramaFormacion.resx">
       <DependentUpon>201803112321498_CabioRelacionProgramaFormacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803112351062_Prueba.resx">
+      <DependentUpon>201803112351062_Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803112356296_prueba2.resx">
+      <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
