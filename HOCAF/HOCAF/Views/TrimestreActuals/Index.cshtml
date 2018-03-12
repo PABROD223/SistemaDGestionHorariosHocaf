@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registrar Trimestre Actual</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idTrimestreActual }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idTrimestreActual }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idTrimestreActual })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idTrimestreActual }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idTrimestreActual }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.idTrimestreActual })
         </td>
     </tr>
 }
