@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registrar Ambientes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idAmbiente }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idAmbiente }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idAmbiente })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idAmbiente }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idAmbiente }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.idAmbiente })
         </td>
     </tr>
 }
