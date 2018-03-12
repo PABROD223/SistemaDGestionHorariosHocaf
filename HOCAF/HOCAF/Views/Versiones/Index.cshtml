@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nueva versión", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.fechaFin)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idVersion }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idVersion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idVersion })
+            @Html.ActionLink("Editar Versión", "Edit", new { id=item.idVersion }) |
+            @Html.ActionLink("Detalles versión", "Details", new { id=item.idVersion }) |
+            @Html.ActionLink("Eliminar versión", "Delete", new { id=item.idVersion })
         </td>
     </tr>
 }
