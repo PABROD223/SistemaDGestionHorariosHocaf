@@ -36,7 +36,7 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Detalles", "Details", new { idjornada=item.idJornada, idtipoFormacion=item.idTipoFormacion }) |
             @Html.ActionLink("Borrar", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
