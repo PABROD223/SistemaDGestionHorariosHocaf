@@ -30,7 +30,6 @@ namespace HOCAF.Models
         public int idTipoFormacion { get; set; }
 
         [Display(Name = "Estado")]
-        [Required(ErrorMessage = "ingrese los datos para el campo{0}")]
         public bool estado { get; set; }
 
         public virtual Jornada Jornada { get; set; }
