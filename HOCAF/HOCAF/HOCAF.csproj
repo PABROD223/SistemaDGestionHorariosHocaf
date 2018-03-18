@@ -197,6 +197,18 @@
     <Compile Include="Migrations\201803112356296_prueba2.Designer.cs">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.cs" />
+    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.Designer.cs">
+      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.cs" />
+    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.Designer.cs">
+      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.cs" />
+    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.Designer.cs">
+      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
     <Compile Include="Models\Dia.cs" />
@@ -368,6 +380,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803112356296_prueba2.resx">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.resx">
+      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182109311_Cambios2Ficha%25Programas.resx">
+      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.resx">
+      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
