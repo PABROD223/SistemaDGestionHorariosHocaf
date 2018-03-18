@@ -19,10 +19,12 @@ namespace HOCAF.Models
 
         [Key]
         public int idJornada { get; set; }
+
         [Display(Name= "Nombre de la Jornada")]
         [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string nombre { get; set; }
+
         [Display(Name = "Estado de la jornada")]
         public bool estado { get; set; }
 
