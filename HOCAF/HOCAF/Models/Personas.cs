@@ -17,28 +17,30 @@ namespace HOCAF.Models
         [Key]
         public int idPersona { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string nombres { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string apellidos { get; set; }
 
         public int idDocumento { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string numeroDocumento { get; set; }
 
         [StringLength(7)]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         public string telefono { get; set; }
 
-        [Required]
+        
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(10)]
         public string celular { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string direccion { get; set; }
 
