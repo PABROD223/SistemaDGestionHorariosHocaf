@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201803182236085_Verificacion.Designer.cs">
       <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803182336550_cambios.cs" />
+    <Compile Include="Migrations\201803182336550_cambios.Designer.cs">
+      <DependentUpon>201803182336550_cambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
     <Compile Include="Models\Dia.cs" />
@@ -409,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803182236085_Verificacion.resx">
       <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182336550_cambios.resx">
+      <DependentUpon>201803182336550_cambios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
