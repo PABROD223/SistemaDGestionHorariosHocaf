@@ -21,6 +21,7 @@ namespace HOCAF.Models
 
         [Key]
         [Column(Order = 2)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idTipoFormacionJTF { get; set; }
 

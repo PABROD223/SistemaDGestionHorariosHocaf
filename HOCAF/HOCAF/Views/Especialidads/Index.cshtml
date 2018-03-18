@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<HOCAF.Models.Especialidad>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Especialidad";
 }
 
 <h2>Especialidad</h2>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar especialidad", "Edit", new { id=item.idEspecialidad }) |
-            @Html.ActionLink("Detalles especialidad", "Details", new { id=item.idEspecialidad }) |
-            @Html.ActionLink("Eliminar especialidad", "Delete", new { id=item.idEspecialidad })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idEspecialidad }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idEspecialidad }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idEspecialidad })
         </td>
     </tr>
 }

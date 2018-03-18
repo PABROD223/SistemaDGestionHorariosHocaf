@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HOCAF.Models.TrimestresFormacion>
+
+@{
+    ViewBag.Title = "TrimestresFormacion";
+}
+
+<h2>Trimestres formación</h2>
+
+<p>
+    @Html.ActionLink("crear trimestres formación", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JornadaTipoFormacion.idJornada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trimestre.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JornadaTipoFormacion.idJornada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trimestre.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF }) |
+            @Html.ActionLink("Detalles", "Details", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF }) |
+            @Html.ActionLink("Eliminar", "Delete", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF })
+        </td>
+    </tr>
+}
+
+</table>

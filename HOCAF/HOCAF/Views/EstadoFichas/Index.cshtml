@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<HOCAF.Models.EstadoFicha>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "EstadoFicha";
 }
 
 <h2>Estado de ficha</h2>
@@ -24,8 +24,8 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.idEstado }) |
-            @Html.ActionLink("Detalle estado de ficha", "Details", new { id=item.idEstado }) |
-            @Html.ActionLink("Eliminar estado de ficha", "Delete", new { id=item.idEstado })
+            @Html.ActionLink("Detalle ", "Details", new { id=item.idEstado }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idEstado })
         </td>
     </tr>
 }
