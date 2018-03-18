@@ -162,6 +162,7 @@
     <Compile Include="Controllers\EstadoFichasController.cs" />
     <Compile Include="Controllers\AmbientesController.cs" />
     <Compile Include="Controllers\DiasController.cs" />
+    <Compile Include="Controllers\EstadoHorariosController.cs" />
     <Compile Include="Controllers\FichasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProgramaDeFormacionsController.cs" />
@@ -196,6 +197,10 @@
     <Compile Include="Migrations\201803112356296_prueba2.cs" />
     <Compile Include="Migrations\201803112356296_prueba2.Designer.cs">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182236085_Verificacion.cs" />
+    <Compile Include="Migrations\201803182236085_Verificacion.Designer.cs">
+      <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
@@ -341,6 +346,11 @@
     <Content Include="Views\Fichas\Details.cshtml" />
     <Content Include="Views\Fichas\Edit.cshtml" />
     <Content Include="Views\Fichas\Index.cshtml" />
+    <Content Include="Views\EstadoHorarios\Create.cshtml" />
+    <Content Include="Views\EstadoHorarios\Delete.cshtml" />
+    <Content Include="Views\EstadoHorarios\Details.cshtml" />
+    <Content Include="Views\EstadoHorarios\Edit.cshtml" />
+    <Content Include="Views\EstadoHorarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803112356296_prueba2.resx">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182236085_Verificacion.resx">
+      <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
