@@ -172,6 +172,7 @@
     <Compile Include="Controllers\TrimestreActualsController.cs" />
     <Compile Include="Controllers\TrimestresController.cs" />
     <Compile Include="Controllers\JornadasController.cs" />
+    <Compile Include="Controllers\TrimestresFormacionsController.cs" />
     <Compile Include="Controllers\VersionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -224,6 +225,7 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Versiones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\TipoFormacionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -335,6 +337,11 @@
     <Content Include="Views\ProgramaDeFormacions\Details.cshtml" />
     <Content Include="Views\ProgramaDeFormacions\Edit.cshtml" />
     <Content Include="Views\ProgramaDeFormacions\Index.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Create.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Delete.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Details.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Edit.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
