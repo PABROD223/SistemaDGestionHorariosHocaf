@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Editar", "Edit", new { idjornada = item.idJornada, idtipoFormacion = item.idTipoFormacion }) |
             @Html.ActionLink("Detalles", "Details", new { idjornada=item.idJornada, idtipoFormacion=item.idTipoFormacion }) |
-            @Html.ActionLink("Borrar", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Borrar", "Delete", new { idjornada = item.idJornada, idtipoFormacion = item.idTipoFormacion } )
         </td>
     </tr>
 }
