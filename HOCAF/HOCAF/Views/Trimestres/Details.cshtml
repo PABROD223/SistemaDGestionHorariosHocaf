@@ -1,7 +1,7 @@
 ﻿@model HOCAF.Models.Trimestre
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
 <h2>Detalles</h2>
@@ -21,6 +21,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.idTrimestre }) |
-    @Html.ActionLink("Volver a la lista", "Index")
+    @Html.ActionLink("Edit", "detalles", new { id = Model.idTrimestre }) |
+    @Html.ActionLink("Vover a la lista", "Index")
 </p>

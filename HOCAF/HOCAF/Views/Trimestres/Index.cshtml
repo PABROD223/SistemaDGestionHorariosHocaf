@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Registrar Trimestres</h2>
+<h2>Sistema de gestion de horarios</h2>
 
 <p>
-    @Html.ActionLink("Crear Nuevo", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.nombre)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idTrimestre }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idTrimestre }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idTrimestre })
+            @Html.ActionLink("Edit", "Edit", new { id=item.idTrimestre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idTrimestre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idTrimestre })
         </td>
     </tr>
 }
