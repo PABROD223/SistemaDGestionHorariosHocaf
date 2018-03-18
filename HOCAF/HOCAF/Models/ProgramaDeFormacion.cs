@@ -12,7 +12,6 @@ namespace HOCAF.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProgramaDeFormacion()
         {
-            Ficha = new HashSet<Ficha>();
             InstructorProgramaDeFormacion = new HashSet<InstructorProgramaDeFormacion>();
         }
 
@@ -38,12 +37,13 @@ namespace HOCAF.Models
 
         public virtual Especialidad Especialidad { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ficha> Ficha { get; set; }
+       
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InstructorProgramaDeFormacion> InstructorProgramaDeFormacion { get; set; }
 
         public virtual TipoFormacion TipoFormacion { get; set; }
+
+        public virtual ICollection<Ficha> Ficha { get; set; }
     }
 }
