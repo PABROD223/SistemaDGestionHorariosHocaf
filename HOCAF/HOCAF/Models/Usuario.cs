@@ -13,11 +13,11 @@ namespace HOCAF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idPersona { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string correo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(500)]
         public string contraseña { get; set; }
 
