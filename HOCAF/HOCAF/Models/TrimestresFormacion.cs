@@ -10,16 +10,19 @@ namespace HOCAF.Models
     public partial class TrimestresFormacion
     {
         [Key]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idTrimestre { get; set; }
 
         [Key]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idjornadaJTF { get; set; }
 
         [Key]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idTipoFormacionJTF { get; set; }
