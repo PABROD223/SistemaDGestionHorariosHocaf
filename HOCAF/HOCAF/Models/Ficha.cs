@@ -42,19 +42,18 @@ namespace HOCAF.Models
         [Column(TypeName = "date")]
         public DateTime fechaFin { get; set; }
 
-        [Display(Name = "Programa de formación")]
-        [Required(ErrorMessage = "ingrese los datos para el campo {0}")]
-        public int idProgramaFormacion { get; set; }
-
         public virtual EstadoFicha EstadoFicha { get; set; }
 
         public virtual Jornada Jornada { get; set; }
 
         public virtual Jornada Jornada1 { get; set; }
 
-        public virtual ProgramaDeFormacion ProgramaDeFormacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Horario> Horario { get; set; }
+
+        public int idPrograma { get; set; }
+
+        public virtual ProgramaDeFormacion ProgramaDeFormacion { get; set; }
     }
 }
