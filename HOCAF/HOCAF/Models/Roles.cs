@@ -17,7 +17,7 @@ namespace HOCAF.Models
         [Key]
         public int idRol { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string nombreRol { get; set; }
 
