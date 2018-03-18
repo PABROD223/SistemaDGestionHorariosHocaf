@@ -1,0 +1,63 @@
+﻿@model IEnumerable<HOCAF.Models.Ficha>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Ficha", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoFicha.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jornada.nombre)
+        </th>
+        @*@<th>
+            @Html.DisplayNameFor(model => model.Jornada1.nombre)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.fechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idProgramaFormacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoFicha.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jornada.nombre)
+        </td>
+        @*@<td>
+            @Html.DisplayFor(modelItem => item.Jornada1.nombre)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idProgramaFormacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idFicha }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idFicha }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idFicha })
+        </td>
+    </tr>
+}
+
+</table>
