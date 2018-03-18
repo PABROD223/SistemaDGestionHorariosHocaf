@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<HOCAF.Models.Jornada>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Jotnada";
 }
 
 <h2>Jornada</h2>
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar jornada", "Edit", new { id=item.idJornada }) |
-            @Html.ActionLink("Detalle jornada", "Details", new { id=item.idJornada }) |
-            @Html.ActionLink("Eliminar jornada", "Delete", new { id=item.idJornada })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idJornada }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.idJornada }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idJornada })
         </td>
     </tr>
 }
