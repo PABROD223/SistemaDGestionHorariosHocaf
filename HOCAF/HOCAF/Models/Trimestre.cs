@@ -19,7 +19,7 @@ namespace HOCAF.Models
         [Key]
         public int idTrimestre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(20)]
         [Display(Name = "Nombre")]
         public string nombre { get; set; }
