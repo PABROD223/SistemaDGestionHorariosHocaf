@@ -55,26 +55,37 @@ namespace HOCAF.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "idJornada,idTipoFormacion,estado")] JornadaTipoFormacion jornadaTipoFormacion)
         {
+            ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre", jornadaTipoFormacion.idJornada);
+            ViewBag.idTipoFormacion = new SelectList(db.TipoFormacion, "idTipoFormacion", "nombre", jornadaTipoFormacion.idTipoFormacion);
+
             if (ModelState.IsValid)
             {
+                var existe = db.JornadaTipoFormacion.Find(jornadaTipoFormacion.idJornada, jornadaTipoFormacion.idTipoFormacion);
+                if (existe!=null)
+                {
+                    ModelState.AddModelError("", "Esta item ya existe.");
+                    return View(jornadaTipoFormacion);
+                }
                 db.JornadaTipoFormacion.Add(jornadaTipoFormacion);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre", jornadaTipoFormacion.idJornada);
-            ViewBag.idTipoFormacion = new SelectList(db.TipoFormacion, "idTipoFormacion", "nombre", jornadaTipoFormacion.idTipoFormacion);
-            return View(jornadaTipoFormacion);
+           return View(jornadaTipoFormacion);
         }
 
         // GET: JornadaTipoFormacions/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? idJornada, int? idtipoFormacion)
         {
-            if (id == null)
+            if (idJornada == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(id);
+            if (idtipoFormacion == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(idJornada, idtipoFormacion);
             if (jornadaTipoFormacion == null)
             {
                 return HttpNotFound();
@@ -91,6 +102,8 @@ namespace HOCAF.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "idJornada,idTipoFormacion,estado")] JornadaTipoFormacion jornadaTipoFormacion)
         {
+            ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre", jornadaTipoFormacion.idJornada);
+            ViewBag.idTipoFormacion = new SelectList(db.TipoFormacion, "idTipoFormacion", "nombre", jornadaTipoFormacion.idTipoFormacion);
             if (ModelState.IsValid)
             {
                 db.Entry(jornadaTipoFormacion).State = EntityState.Modified;
@@ -103,13 +116,17 @@ namespace HOCAF.Controllers
         }
 
         // GET: JornadaTipoFormacions/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? idJornada, int? idtipoFormacion)
         {
-            if (id == null)
+            if (idJornada == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(id);
+            if ( idtipoFormacion == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(idJornada, idtipoFormacion);
             if (jornadaTipoFormacion == null)
             {
                 return HttpNotFound();
@@ -120,9 +137,9 @@ namespace HOCAF.Controllers
         // POST: JornadaTipoFormacions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int? idJornada, int? idtipoFormacion)
         {
-            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(id);
+            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find( idJornada,idtipoFormacion);
             db.JornadaTipoFormacion.Remove(jornadaTipoFormacion);
             db.SaveChanges();
             return RedirectToAction("Index");
