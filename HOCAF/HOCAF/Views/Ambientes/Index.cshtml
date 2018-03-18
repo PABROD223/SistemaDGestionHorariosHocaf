@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.Ambiente>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Ambientes";
 }
 
-<h2>Registrar Ambientes</h2>
+<h2>Ambientes</h2>
 
 <p>
-    @Html.ActionLink("Crear nuevo", "Create")
+    @Html.ActionLink("Crear ambiente", "Create")
 </p>
 <table class="table">
     <tr>
@@ -43,7 +43,7 @@
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.idAmbiente }) |
             @Html.ActionLink("Detalles", "Details", new { id=item.idAmbiente }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idAmbiente })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idAmbiente })
         </td>
     </tr>
 }
