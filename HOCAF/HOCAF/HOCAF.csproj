@@ -162,6 +162,7 @@
     <Compile Include="Controllers\EstadoFichasController.cs" />
     <Compile Include="Controllers\AmbientesController.cs" />
     <Compile Include="Controllers\DiasController.cs" />
+    <Compile Include="Controllers\FichasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SedesController.cs" />
     <Compile Include="Controllers\TipoAmbientesController.cs" />
@@ -329,6 +330,11 @@
     <Content Include="Views\Dias\Details.cshtml" />
     <Content Include="Views\Dias\Edit.cshtml" />
     <Content Include="Views\Dias\Index.cshtml" />
+    <Content Include="Views\Fichas\Create.cshtml" />
+    <Content Include="Views\Fichas\Delete.cshtml" />
+    <Content Include="Views\Fichas\Details.cshtml" />
+    <Content Include="Views\Fichas\Edit.cshtml" />
+    <Content Include="Views\Fichas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
