@@ -22,13 +22,18 @@ namespace HOCAF.Controllers
         }
 
         // GET: JornadaTipoFormacions/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? idjornada,int?  idtipoFormacion)
         {
-            if (id == null)
+            if (idjornada == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(id);
+
+            if (idtipoFormacion == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            JornadaTipoFormacion jornadaTipoFormacion = db.JornadaTipoFormacion.Find(idjornada, idtipoFormacion);
             if (jornadaTipoFormacion == null)
             {
                 return HttpNotFound();
