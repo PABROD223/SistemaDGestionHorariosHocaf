@@ -19,7 +19,7 @@ namespace HOCAF.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idPersona { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [StringLength(50)]
         public string cargo { get; set; }
 
