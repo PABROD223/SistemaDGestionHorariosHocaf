@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.ProgramaDeFormacion>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ProgramasDeFormacion";
 }
 
-<h2>Index</h2>
+<h2>Programas de formación</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear programa de formación", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.siglas)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idPrograma }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idPrograma }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idPrograma })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idPrograma }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idPrograma }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idPrograma })
         </td>
     </tr>
 }

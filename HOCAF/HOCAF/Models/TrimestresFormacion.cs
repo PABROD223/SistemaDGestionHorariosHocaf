@@ -24,6 +24,7 @@ namespace HOCAF.Models
         [Key]
         [Required(ErrorMessage = "Ingrese los datos requeridos para el campo {0}")]
         [Column(Order = 2)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idTipoFormacionJTF { get; set; }
 

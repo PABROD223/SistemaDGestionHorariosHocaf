@@ -41,7 +41,7 @@ namespace HOCAF.Controllers
         {
             ViewBag.idEstadoFicha = new SelectList(db.EstadoFicha, "idEstado", "nombre");
             ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre");
-            ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre");
+            ViewBag.idPrograma = new SelectList(db.ProgramaDeFormacion, "idPrograma", "nombre");
             return View();
         }
 
@@ -50,7 +50,7 @@ namespace HOCAF.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idFicha,idJornada,idEstadoFicha,fechaInicio,fechaFin,idProgramaFormacion")] Ficha ficha)
+        public ActionResult Create(Ficha ficha)
         {
             if (ModelState.IsValid)
             {
@@ -58,9 +58,8 @@ namespace HOCAF.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.idPrograma = new SelectList(db.ProgramaDeFormacion, "idPrograma", "nombre",ficha.idPrograma);
             ViewBag.idEstadoFicha = new SelectList(db.EstadoFicha, "idEstado", "nombre", ficha.idEstadoFicha);
-            ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre", ficha.idJornada);
             ViewBag.idJornada = new SelectList(db.Jornada, "idJornada", "nombre", ficha.idJornada);
             return View(ficha);
         }
@@ -88,7 +87,7 @@ namespace HOCAF.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idFicha,idJornada,idEstadoFicha,fechaInicio,fechaFin,idProgramaFormacion")] Ficha ficha)
+        public ActionResult Edit([Bind(Include = "idFicha,idJornada,idEstadoFicha,fechaInicio,fechaFin,idPrograma")] Ficha ficha)
         {
             if (ModelState.IsValid)
             {

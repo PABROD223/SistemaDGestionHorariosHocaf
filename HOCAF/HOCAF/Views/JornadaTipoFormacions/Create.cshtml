@@ -1,10 +1,10 @@
 ﻿@model HOCAF.Models.JornadaTipoFormacion
 
 @{
-    ViewBag.Title = "Crear";
+    ViewBag.Title = "CrearJornadaTipoFormacion";
 }
 
-<h2>Crear</h2>
+<h2>Crear jornada tipo formación</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>JornadaTipoFormacion</h4>
+        <h4>Jornada tipo formación</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

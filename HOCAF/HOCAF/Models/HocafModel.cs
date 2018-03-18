@@ -173,11 +173,6 @@
                 .Property(e => e.siglas)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ProgramaDeFormacion>()
-                .HasMany(e => e.Ficha)
-                .WithRequired(e => e.ProgramaDeFormacion)
-        
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProgramaDeFormacion>()
                 .HasMany(e => e.InstructorProgramaDeFormacion)

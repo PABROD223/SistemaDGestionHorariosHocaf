@@ -1,0 +1,42 @@
+﻿@model HOCAF.Models.TrimestresFormacion
+
+@{
+    ViewBag.Title = "DetallesTrimestresFormacion";
+}
+
+<h2>Detalles trimestre de formación</h2>
+
+<div>
+    <h4>Trimestres Formación</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JornadaTipoFormacion.idJornada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JornadaTipoFormacion.idJornada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trimestre.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trimestre.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("volver a la lista", "Index")
+</p>

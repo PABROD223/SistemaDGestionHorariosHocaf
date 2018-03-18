@@ -174,6 +174,7 @@
     <Compile Include="Controllers\TrimestreActualsController.cs" />
     <Compile Include="Controllers\TrimestresController.cs" />
     <Compile Include="Controllers\JornadasController.cs" />
+    <Compile Include="Controllers\TrimestresFormacionsController.cs" />
     <Compile Include="Controllers\VersionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,18 @@
     <Compile Include="Migrations\201803112356296_prueba2.cs" />
     <Compile Include="Migrations\201803112356296_prueba2.Designer.cs">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.cs" />
+    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.Designer.cs">
+      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.cs" />
+    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.Designer.cs">
+      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.cs" />
+    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.Designer.cs">
+      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201803182236085_Verificacion.cs" />
     <Compile Include="Migrations\201803182236085_Verificacion.Designer.cs">
@@ -230,6 +243,7 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Versiones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\TipoFormacionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -351,6 +365,11 @@
     <Content Include="Views\EstadoHorarios\Details.cshtml" />
     <Content Include="Views\EstadoHorarios\Edit.cshtml" />
     <Content Include="Views\EstadoHorarios\Index.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Create.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Delete.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Details.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Edit.cshtml" />
+    <Content Include="Views\TrimestresFormacions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -378,6 +397,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803112356296_prueba2.resx">
       <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.resx">
+      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182109311_Cambios2Ficha%25Programas.resx">
+      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.resx">
+      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803182236085_Verificacion.resx">
       <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
