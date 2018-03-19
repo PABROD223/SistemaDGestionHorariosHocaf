@@ -7,13 +7,13 @@ namespace HOCAF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class cambiotamañodedatotablaTipoDocumento : IMigrationMetadata
+    public sealed partial class PrimeraMigracion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(cambiotamañodedatotablaTipoDocumento));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PrimeraMigracion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803112211199_cambiotamañodedatotablaTipoDocumento"; }
+            get { return "201803190003556_PrimeraMigracion"; }
         }
         
         string IMigrationMetadata.Source

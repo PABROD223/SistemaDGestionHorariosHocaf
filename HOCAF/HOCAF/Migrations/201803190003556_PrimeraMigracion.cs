@@ -80,16 +80,15 @@ namespace HOCAF.Migrations
                         idEstadoFicha = c.Int(nullable: false),
                         fechaInicio = c.DateTime(nullable: false, storeType: "date"),
                         fechaFin = c.DateTime(nullable: false, storeType: "date"),
-                        idProgramaFormacion = c.Int(nullable: false),
-                        idEspecialidadPF = c.Int(nullable: false),
+                        idPrograma = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.idFicha)
                 .ForeignKey("dbo.EstadoFicha", t => t.idEstadoFicha)
                 .ForeignKey("dbo.Jornada", t => t.idJornada)
-                .ForeignKey("dbo.ProgramaDeFormacion", t => new { t.idProgramaFormacion, t.idEspecialidadPF })
+                .ForeignKey("dbo.ProgramaDeFormacion", t => t.idPrograma, cascadeDelete: true)
                 .Index(t => t.idJornada)
                 .Index(t => t.idEstadoFicha)
-                .Index(t => new { t.idProgramaFormacion, t.idEspecialidadPF });
+                .Index(t => t.idPrograma);
             
             CreateTable(
                 "dbo.EstadoFicha",
@@ -139,12 +138,12 @@ namespace HOCAF.Migrations
                 c => new
                     {
                         idPrograma = c.Int(nullable: false),
-                        idEspecialidad = c.Int(nullable: false),
                         nombre = c.String(nullable: false, maxLength: 50, unicode: false),
                         siglas = c.String(nullable: false, maxLength: 50, unicode: false),
+                        idEspecialidad = c.Int(nullable: false),
                         idTipoFormacion = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.idPrograma, t.idEspecialidad })
+                .PrimaryKey(t => t.idPrograma)
                 .ForeignKey("dbo.Especialidad", t => t.idEspecialidad)
                 .ForeignKey("dbo.TipoFormacion", t => t.idTipoFormacion)
                 .Index(t => t.idEspecialidad)
@@ -166,14 +165,13 @@ namespace HOCAF.Migrations
                     {
                         idPersonaInstructor = c.Int(nullable: false),
                         idPrograma = c.Int(nullable: false),
-                        idEspecialidad = c.Int(nullable: false),
                         estado = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => new { t.idPersonaInstructor, t.idPrograma, t.idEspecialidad })
+                .PrimaryKey(t => new { t.idPersonaInstructor, t.idPrograma })
                 .ForeignKey("dbo.Instructor", t => t.idPersonaInstructor)
-                .ForeignKey("dbo.ProgramaDeFormacion", t => new { t.idPrograma, t.idEspecialidad })
+                .ForeignKey("dbo.ProgramaDeFormacion", t => t.idPrograma)
                 .Index(t => t.idPersonaInstructor)
-                .Index(t => new { t.idPrograma, t.idEspecialidad });
+                .Index(t => t.idPrograma);
             
             CreateTable(
                 "dbo.Instructor",
@@ -195,7 +193,7 @@ namespace HOCAF.Migrations
                         apellidos = c.String(nullable: false, maxLength: 50, unicode: false),
                         idDocumento = c.Int(nullable: false),
                         numeroDocumento = c.String(nullable: false, maxLength: 50, unicode: false),
-                        telefono = c.String(maxLength: 7, unicode: false),
+                        telefono = c.String(nullable: false, maxLength: 7, unicode: false),
                         celular = c.String(nullable: false, maxLength: 10, unicode: false),
                         direccion = c.String(nullable: false, maxLength: 50, unicode: false),
                     })
@@ -231,7 +229,7 @@ namespace HOCAF.Migrations
                 c => new
                     {
                         idDocumento = c.Int(nullable: false, identity: true),
-                        nombreDocumento = c.String(nullable: false, maxLength: 20, unicode: false),
+                        nombreDocumento = c.String(nullable: false, maxLength: 30, unicode: false),
                     })
                 .PrimaryKey(t => t.idDocumento);
             
@@ -341,14 +339,14 @@ namespace HOCAF.Migrations
             DropForeignKey("dbo.TrimestresFormacion", "idTrimestre", "dbo.Trimestre");
             DropForeignKey("dbo.Horario", "idTrimestre", "dbo.Trimestre");
             DropForeignKey("dbo.ProgramaDeFormacion", "idTipoFormacion", "dbo.TipoFormacion");
-            DropForeignKey("dbo.InstructorProgramaDeFormacion", new[] { "idPrograma", "idEspecialidad" }, "dbo.ProgramaDeFormacion");
+            DropForeignKey("dbo.InstructorProgramaDeFormacion", "idPrograma", "dbo.ProgramaDeFormacion");
             DropForeignKey("dbo.Usuario", "idPersona", "dbo.Personas");
             DropForeignKey("dbo.Personas", "idDocumento", "dbo.TipoDocumento");
             DropForeignKey("dbo.RolDePersona", "idPersona", "dbo.Personas");
             DropForeignKey("dbo.RolDePersona", "idRol", "dbo.Roles");
             DropForeignKey("dbo.Instructor", "idPersona", "dbo.Personas");
             DropForeignKey("dbo.InstructorProgramaDeFormacion", "idPersonaInstructor", "dbo.Instructor");
-            DropForeignKey("dbo.Ficha", new[] { "idProgramaFormacion", "idEspecialidadPF" }, "dbo.ProgramaDeFormacion");
+            DropForeignKey("dbo.Ficha", "idPrograma", "dbo.ProgramaDeFormacion");
             DropForeignKey("dbo.ProgramaDeFormacion", "idEspecialidad", "dbo.Especialidad");
             DropForeignKey("dbo.JornadaTipoFormacion", "idTipoFormacion", "dbo.TipoFormacion");
             DropForeignKey("dbo.Ficha", "idJornada", "dbo.Jornada");
@@ -363,13 +361,13 @@ namespace HOCAF.Migrations
             DropIndex("dbo.RolDePersona", new[] { "idPersona" });
             DropIndex("dbo.Personas", new[] { "idDocumento" });
             DropIndex("dbo.Instructor", new[] { "idPersona" });
-            DropIndex("dbo.InstructorProgramaDeFormacion", new[] { "idPrograma", "idEspecialidad" });
+            DropIndex("dbo.InstructorProgramaDeFormacion", new[] { "idPrograma" });
             DropIndex("dbo.InstructorProgramaDeFormacion", new[] { "idPersonaInstructor" });
             DropIndex("dbo.ProgramaDeFormacion", new[] { "idTipoFormacion" });
             DropIndex("dbo.ProgramaDeFormacion", new[] { "idEspecialidad" });
             DropIndex("dbo.JornadaTipoFormacion", new[] { "idTipoFormacion" });
             DropIndex("dbo.JornadaTipoFormacion", new[] { "idJornada" });
-            DropIndex("dbo.Ficha", new[] { "idProgramaFormacion", "idEspecialidadPF" });
+            DropIndex("dbo.Ficha", new[] { "idPrograma" });
             DropIndex("dbo.Ficha", new[] { "idEstadoFicha" });
             DropIndex("dbo.Ficha", new[] { "idJornada" });
             DropIndex("dbo.Horario", new[] { "idEstado" });

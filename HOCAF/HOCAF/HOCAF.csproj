@@ -179,45 +179,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803042229128_PrimeraMigracion.cs" />
-    <Compile Include="Migrations\201803042229128_PrimeraMigracion.Designer.cs">
-      <DependentUpon>201803042229128_PrimeraMigracion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803112321498_CabioRelacionProgramaFormacion.cs" />
-    <Compile Include="Migrations\201803112321498_CabioRelacionProgramaFormacion.Designer.cs">
-      <DependentUpon>201803112321498_CabioRelacionProgramaFormacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.cs" />
-    <Compile Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.Designer.cs">
-      <DependentUpon>201803112211199_cambiotamañodedatotablaTipoDocumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803112351062_Prueba.cs" />
-    <Compile Include="Migrations\201803112351062_Prueba.Designer.cs">
-      <DependentUpon>201803112351062_Prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803112356296_prueba2.cs" />
-    <Compile Include="Migrations\201803112356296_prueba2.Designer.cs">
-      <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.cs" />
-    <Compile Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.Designer.cs">
-      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.cs" />
-    <Compile Include="Migrations\201803182109311_Cambios2Ficha%25Programas.Designer.cs">
-      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.cs" />
-    <Compile Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.Designer.cs">
-      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182236085_Verificacion.cs" />
-    <Compile Include="Migrations\201803182236085_Verificacion.Designer.cs">
-      <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803182336550_cambios.cs" />
-    <Compile Include="Migrations\201803182336550_cambios.Designer.cs">
-      <DependentUpon>201803182336550_cambios.cs</DependentUpon>
+    <Compile Include="Migrations\201803190003556_PrimeraMigracion.cs" />
+    <Compile Include="Migrations\201803190003556_PrimeraMigracion.Designer.cs">
+      <DependentUpon>201803190003556_PrimeraMigracion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ambiente.cs" />
@@ -387,35 +351,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803042229128_PrimeraMigracion.resx">
-      <DependentUpon>201803042229128_PrimeraMigracion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803112211199_cambiotamañodedatotablaTipoDocumento.resx">
-      <DependentUpon>201803112211199_cambiotamañodedatotablaTipoDocumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803112321498_CabioRelacionProgramaFormacion.resx">
-      <DependentUpon>201803112321498_CabioRelacionProgramaFormacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803112351062_Prueba.resx">
-      <DependentUpon>201803112351062_Prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803112356296_prueba2.resx">
-      <DependentUpon>201803112356296_prueba2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182103083_CambioFichas&amp;ProgramasFormacion.resx">
-      <DependentUpon>201803182103083_CambioFichas&amp;ProgramasFormacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182109311_Cambios2Ficha%25Programas.resx">
-      <DependentUpon>201803182109311_Cambios2Ficha%25Programas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182113536_RelacionFichaProgramaFormacion.resx">
-      <DependentUpon>201803182113536_RelacionFichaProgramaFormacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182236085_Verificacion.resx">
-      <DependentUpon>201803182236085_Verificacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803182336550_cambios.resx">
-      <DependentUpon>201803182336550_cambios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803190003556_PrimeraMigracion.resx">
+      <DependentUpon>201803190003556_PrimeraMigracion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
