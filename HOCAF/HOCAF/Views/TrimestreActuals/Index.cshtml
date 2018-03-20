@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.TrimestreActual>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "TrimestreActual";
 }
 
-<h2>Registrar Trimestre Actual</h2>
+<h2>Trimestre Actual</h2>
 
 <p>
-    @Html.ActionLink("Crear Nuevo", "Create")
+    @Html.ActionLink("Crear nuevo trimestre actual", "Create")
 </p>
 <table class="table">
     <tr>
@@ -29,9 +29,13 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idTrimestreActual }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idTrimestreActual }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idTrimestreActual })
+            <a href="@Url.Action("Edit", new { id=item.idTrimestreActual })"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.idTrimestreActual })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { id=item.idTrimestreActual })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }
