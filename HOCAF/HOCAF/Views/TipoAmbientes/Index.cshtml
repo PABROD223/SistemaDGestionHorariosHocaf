@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.TipoAmbiente>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "TipoAmbiente";
 }
 
-<h2>Registrar Tipo Ambientes</h2>
+<h2>Tipo Ambientes</h2>
 
 <p>
-    @Html.ActionLink("Crear nuevo", "Create")
+    @Html.ActionLink("Crear nuevo tipo ambiente", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,13 @@
             @Html.DisplayFor(modelItem => item.nombre)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idTipoAmbiente }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idTipoAmbiente }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idTipoAmbiente })
+            <a href="@Url.Action("Edit", new { id=item.idTipoAmbiente })"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.idTipoAmbiente })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { id=item.idTipoAmbiente })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }
