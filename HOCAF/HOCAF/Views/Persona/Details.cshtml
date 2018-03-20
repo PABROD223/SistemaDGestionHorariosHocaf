@@ -1,0 +1,150 @@
+﻿@model HOCAF.ViewModels.PersonaViewModel
+@{
+    ViewBag.Title = "Detalle Persona";
+}
+@using (Html.BeginForm())
+{ @Html.HiddenFor(model => model.idPersona)
+    @Html.HiddenFor(model => model.EsInstructor);
+    <h2>Detalle Persona</h2>
+    <hr />
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombres)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.nombres)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.apellidos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.idDocumento)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.nombreTipoDocumento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroDocumento)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.numeroDocumento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.celular)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.celular)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.EditorFor(model => model.correo)
+        </dd>
+        @if (Model.EsInstructor)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.cargo)
+            </dt>
+
+            <dd>
+                @Html.EditorFor(model => model.cargo)
+            </dd>
+        }
+    </dl>
+
+    if (Model.EsInstructor)
+    {
+
+
+
+        <h3>Programas De Formación</h3>
+        <hr />
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="idProgramaFormacion">Programa Formación</label>
+                @Html.DropDownList("idProgramaFormacion", null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.idProgramaFormacion, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <br />
+                <button type="submit" class="btn btn-success" value="Agregar" name="opcion">Agregar Programa</button>
+            </div>
+            <div class="form-group">
+                <br />
+                <button type="submit" class="btn btn-primary" value="Guardar" name="opcion">Guardar Cambios</button>
+            </div>
+        </div>
+        <div class="">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <br />
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+
+                    @for (int i = 0; i < Model.programasDelInstructor.Count(); i++)
+                    {
+                        <tr>
+                            <td>@Html.TextBoxFor(model => model.programasDelInstructor[i].idPrograma)</td>
+                            <td>@Html.DisplayFor(model => model.programasDelInstructor[i].nombre)</td>
+                            <td>
+                                @if (Model.programasDelInstructor[i].estado)
+                                {
+                                    <label class="text-success">@Html.CheckBoxFor(model => model.programasDelInstructor[i].estado) Activo</label>
+                                }
+                                else
+                                {
+                                    <label class="text-danger">@Html.CheckBoxFor(model => model.programasDelInstructor[i].estado) Inactivo</label>
+                                }
+                            </td>
+                            <td>
+                                <button type="submit" class="btn-danger" value="Eliminar/@Model.programasDelInstructor[i].idPrograma" name="opcion"><span class="glyphicon glyphicon-remove"></span></button>
+                            </td>
+                        </tr>
+                    }
+                </thead>
+            </table>
+        </div>
+    }
+}
+
+<style>
+    input[type=text]{
+        border:none;
+        pointer-events:none;
+        width:100%;
+    }
+</style>
