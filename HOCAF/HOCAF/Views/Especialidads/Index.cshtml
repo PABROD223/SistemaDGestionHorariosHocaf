@@ -29,10 +29,17 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idEspecialidad }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idEspecialidad }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.idEspecialidad })
+           
+        <td>
+            <a href="@Url.Action("Edit", new { id = item.idEspecialidad  })"><span class="glyphicon glyphicon-edit"></span></a>
         </td>
+        <td>
+            <a href="@Url.Action("Details", new {id = item.idEspecialidad })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new {id = item.idEspecialidad })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
+        </td>
+       
     </tr>
 }
 
