@@ -1,0 +1,63 @@
+﻿@model HOCAF.Models.Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOCAF-Login</title>
+
+    <!--Site Style-->
+    <link href="~/Assets/Style/LoginStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <!--Fin Site Style-->
+    <!--Iconos-->
+    <link rel="stylesheet" type="text/css" href="http://cdn.metroui.org.ua/css/metro-icons.min.css" />
+    <!--Fin Iconos-->
+    <link href="../../Assets/Fonts/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <!--Site JS-->
+    <!--Fin Site JS-->
+</head>
+<body>
+    @using (Html.BeginForm())
+    {@Html.AntiForgeryToken()
+        <div class="login-container">
+            <img src="../../Assets/Images/man2.png" alt="User Image" />
+            <form id="form1">
+                <div class="form-input-user">
+                    @Html.TextBoxFor(model=>model.correo,new { @placeholder= "Ingrese Correo..." })
+                    
+                    @*<input type="text" name="username" id="txtUser" placeholder="Ingrese Correo" />*@
+                </div>
+                <div class="login-error">
+                    @Html.ValidationMessageFor(model => model.correo, "")
+                </div>
+                <div class="form-input-pass">
+                    @Html.PasswordFor(model => model.contraseña, new { @placeholder = "Ingrese Contraseña..." })
+                   
+                    @*<input type="password" name="password" id="txtPass" placeholder="Ingrese Contraseña" />*@
+                </div>
+                <div class="login-error">
+                    @Html.ValidationMessageFor(model => model.contraseña, "",new { @class= "login-error" })
+                </div>
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
+                <input type="submit" name="name" value="Ingresar" class="login-boton" />
+                <p>
+
+                </p>
+                <p>
+
+                </p>
+                <p><a href="#">Recuperar Contraseña</a></p>
+            </form>
+        </div>
+    }
+</body>
+</html>

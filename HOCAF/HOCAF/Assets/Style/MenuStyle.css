@@ -1,0 +1,207 @@
+﻿
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@-webkit-keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+nav > ul > li > label {
+    font-weight: normal !important;
+}
+
+nav {
+    font-size: 17px;
+}
+
+.sidebar_container li > ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    box-shadow: 3px 0 10px rgba(0,0,0,.2);
+    -webkit-animation: aparecer .7s;
+    display: none;
+}
+
+.sidebar_container ul {
+    list-style: none;
+    background: #1C1C1C;
+}
+
+.sidebar_container {
+    background: #1C1C1C;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 200px;
+    top: 0;
+    box-shadow: 3px 0 10px rgba(0,0,0,.2);
+    -webkit-transition: left .5s ease;
+    -o-transition: left .5s ease;
+    transition: left .5s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#menu_principal a, label {
+    color: #868686;
+    display: block;
+    padding-left: 25px;
+    text-decoration: none;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#menu_principal {
+    padding-top: 0%;
+    padding-left: 0px;
+}
+
+    #menu_principal li {
+        margin: auto;
+        height: auto;
+        line-height: 30px;
+        position: relative;
+        width: 100%;
+    }
+
+    #menu_principal > li {
+        margin: 0 0 5% 0;
+    }
+
+.invisible {
+    left: -220px;
+    transition: all .5s;
+}
+
+.derecha {
+    float: right;
+    padding-right: 10px;
+    line-height: 30px;
+    padding-top: 4%;
+}
+
+.principales {
+    margin-right: 10px;
+}
+
+#menu_principal li:hover > a, #menu_principal li:hover > label {
+    color: #fff;
+    cursor: pointer;
+    background-color: #008B8B;
+}
+
+[id^=drop], .mif-chevron-right {
+    display: none;
+}
+
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+nav ul li:hover > ul {
+    display: none;
+}
+
+.sidebar_container li > ul {
+    position: static;
+    height: auto;
+    box-shadow: none;
+    padding-left: 15px;
+    width: auto;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    -webkit-animation: aparecer .3s;
+    display: none;
+}
+
+.boton {
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 210px;
+    top: 3%;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    background: #008B8B;
+    -webkit-transition: left .5s ease;
+    -o-transition: left .5s ease;
+    transition: left .5s ease;
+    position:fixed;
+    z-index:100;
+}
+
+    .boton:hover {
+        cursor: pointer;
+    }
+
+.menu-nav {
+    border-bottom: 2px solid #D3D3D3;
+    height: auto;
+}
+
+.page-content {
+    margin-left: 210px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    margin-bottom:30px;
+}
+
+.mover-contenido {
+    margin-left: 0;
+}
+
+.mover-boton {
+    left: 10px;
+}
+
+.img-perfil {
+    padding: 20px;
+}
+
+.sidebar_container::-webkit-scrollbar {
+    margin-right: 3px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 6px;
+    width: 5px;
+}
+
+.sidebar_container::-webkit-scrollbar-track {
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+
+.sidebar_container::-webkit-scrollbar-thumb {
+    border: 1px #008B8B solid;
+    border-radius: 12px;
+    background: #008B8B;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3) inset;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.img-perfil-image {
+    transition: all .3s;
+    border-radius: 50%;
+}
+
+    .img-perfil-image:hover {
+        border: 10px double #008B8B;
+    }

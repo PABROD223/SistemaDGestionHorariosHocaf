@@ -2,42 +2,235 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Titulo de la pagina-->
+    <title>@ViewBag.Title - HOCAF</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <!--Site Style-->
+    <link href="../../Assets/Style/MenuStyle.css" rel="stylesheet" />
+    <link href="../../Assets/Style/SiteStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <!--Fin Site Style-->
+    <!--Iconos-->
+    <link rel="stylesheet" type="text/css" href="http://cdn.metroui.org.ua/css/metro-icons.min.css" />
+    <!--Fin Iconos-->
+   
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+
+        <div class="sidebar_container">
+            <nav>
+                <div class="img-perfil">
+                    <img src="../../Assets/Images/man2.png" alt="Alternate Text" class="img-responsive img-perfil-image" width="150" />
+                </div>
+                <ul id="menu_principal">
+                    <li>
+                        <label for="drop-1">
+                            @Session["NombreUsuario"].ToString()
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-1" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("LogOut","Home")">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index","Home")"><span class="mif-home mif-1x principales"></span> Inicio</a>
+                    </li>
+                    <li>
+                        <label for="drop-2">
+                            <span class="mif-user mif-2x principales"></span>Usuarios
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-2" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Create","Persona")">Agregar</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Persona")">Todos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-3">
+                            <span class="mif-user mif-2x principales"></span>Documentos
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-3" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Create","TipoDocumentoes")">Agregar</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","TipoDocumentoes")">Todos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="drop-4">
+                            <span class="mif-user mif-2x principales"></span>Sedes
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-4" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Sedes")">Sedes Registradas</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Ambientes")">Ambientes</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","TipoAmbientes")">Tipo Ambientes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index","Dias")">Días</a>
+                    </li>
+                    <li><a href="@Url.Action("Index","Especialidads")">Especialidad</a></li>
+                    <li>
+                        <label for="drop-5">
+                            <span class="mif-user mif-2x principales"></span>Jornadas
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-5" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Jornadas")">Jornadas</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","JornadaTipoFormacions")">Jornadas Y Tipo Formacion</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","TrimestresFormacions")">Jornadas Y Trimestres</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-6">
+                            <span class="mif-user mif-2x principales"></span>Programas Formación
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-6" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","ProgramaDeFormacions")">Programas Formación</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","TipoFormacions")">Tipos Formacion</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-7">
+                            <span class="mif-user mif-2x principales"></span>Fichas
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-7" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Fichas")">Fichas</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","EstadoFichas")">Estado Fichas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-8">
+                            <span class="mif-user mif-2x principales"></span>Trimestres
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-8" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Trimestres")">Trimestres</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","TrimestreActuals")">Trimestre Actual</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="drop-9">
+                            <span class="mif-user mif-2x principales"></span>Horarios
+                            <span class="mif-caret mif-3x principales"></span>
+                            <span class="mif-expand-more mif-2 derecha"></span>
+                        </label>
+                        <input type="checkbox" id="drop-9" />
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","EstadoHorarios")">Estado Horarios</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Versiones")">Versiones</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
+            </nav>
+        </div>
+        <!--Fin sidebar-->
+        <div class="page-content">
+            <div class="menu-nav">
+                <span class="mif-chevron-left mif-3x boton" id="boton-menu"></span>
+                <h4 style="text-align: center; vertical-align: middle">
+                    <img src="../Assets/Images/logo-hocaf.png" alt="Logo" width="100" />
+                </h4>
+            </div>
+            <div class="col-md-12">
+                <div class="container">
+                    <br />
+                    <br />
+                    @RenderBody()
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
-    </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <!--Site JS-->
+    <script src="../../Assets/Js/Menu.js"></script>
+    <!--Fin Site JS-->
+
+    <script type="text/javascript">
+        $('#boton-menu').on('click', function () {
+            if (!$(".sidebar_container").hasClass("invisible")) {
+                $(".sidebar_container").addClass("invisible");
+                $(".page-content").addClass("mover-contenido");
+                $("#boton-menu").removeClass("mif-chevron-left");
+                $("#boton-menu").addClass("mif-chevron-right");
+                $("#boton-menu").addClass("mover-boton");
+            }
+            else {
+                $(".sidebar_container").removeClass("invisible");
+                $(".page-content").removeClass("mover-contenido");
+                $("#boton-menu").removeClass("mif-chevron-right");
+                $("#boton-menu").addClass("mif-chevron-left");
+                $("#boton-menu").removeClass("mover-boton");
+            }
+        })
+    </script>
+
 </body>
 </html>
