@@ -35,9 +35,13 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF }) |
-            @Html.ActionLink("Detalles", "Details", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF }) |
-            @Html.ActionLink("Eliminar", "Delete", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF })
+            <a href="@Url.Action("Edit", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF  })"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF  })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { idTrimestre = item.idTrimestre, idJornadaJTF = item.idjornadaJTF, idTipoFormacionJTF = item.idTipoFormacionJTF  })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }
