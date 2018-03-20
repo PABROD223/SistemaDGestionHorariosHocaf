@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.Sede>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Sedes";
 }
 
-<h2>Registrar Sedes</h2>
+<h2>Sedes</h2>
 
 <p>
-    @Html.ActionLink("Crear nuevo", "Create")
+    @Html.ActionLink("Crear nueva sede", "Create")
 </p>
 <table class="table">
     <tr>
@@ -35,9 +35,13 @@
             @Html.DisplayFor(modelItem => item.direccion)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idSede }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idSede }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idSede })
+            <a href="@Url.Action("Edit", new { id=item.idSede })"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.idSede })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { id=item.idSede })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }

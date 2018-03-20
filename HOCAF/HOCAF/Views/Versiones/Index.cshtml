@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<HOCAF.Models.Versiones>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Versiones";
 }
 
-<h2>Index</h2>
+<h2>Versiones</h2>
 
 <p>
     @Html.ActionLink("Crear nueva versión", "Create")
@@ -41,9 +41,13 @@
             @Html.DisplayFor(modelItem => item.fechaFin)
         </td>
         <td>
-            @Html.ActionLink("Editar Versión", "Edit", new { id=item.idVersion }) |
-            @Html.ActionLink("Detalles versión", "Details", new { id=item.idVersion }) |
-            @Html.ActionLink("Eliminar versión", "Delete", new { id=item.idVersion })
+            <a href="@Url.Action("Edit", new { id=item.idVersion})"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.idVersion })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { id=item.idVersion })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }

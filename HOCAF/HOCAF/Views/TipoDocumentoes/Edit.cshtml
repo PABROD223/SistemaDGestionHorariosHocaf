@@ -1,10 +1,10 @@
 ﻿@model HOCAF.Models.TipoDocumento
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "EditarTipoDocumento";
 }
 
-<h2>Editar</h2>
+<h2>Editar tipo documento</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>TipoDocumento</h4>
+        <h4>Tipo documento</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.idDocumento)
