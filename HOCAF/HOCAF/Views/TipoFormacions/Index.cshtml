@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<HOCAF.Models.TipoFormacion>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "TiposFormacion";
 }
 
-<h2>Registrar Tipos de Formacion</h2>
+<h2>Tipos de Formación</h2>
 
 <p>
-    @Html.ActionLink("Crear Nuevo", "Create")
+    @Html.ActionLink("Crear nuevo tipo de formación", "Create")
 </p>
 <table class="table">
     <tr>
@@ -29,9 +29,13 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.idTipoFormacion }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.idTipoFormacion }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.idTipoFormacion })
+            <a href="@Url.Action("Edit", new { id=item.idTipoFormacion })"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.idTipoFormacion })" class="text-success"><span class="glyphicon glyphicon-eye-open"></span></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Delete", new { id=item.idTipoFormacion })" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a>
         </td>
     </tr>
 }
