@@ -1,0 +1,90 @@
+﻿@model HOCAF.Models.Personas
+@{
+    ViewBag.Title = "Eliminar Persona";
+}
+
+<h2>Eliminar Persona</h2>
+<p>Está seguro(a) de eliminar a esta persona.</p>
+<h4>Persona</h4>
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.nombres)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.nombres)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.apellidos)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.apellidos)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.idDocumento)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.TipoDocumento.nombreDocumento)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.numeroDocumento)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.numeroDocumento)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.telefono)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.telefono)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.celular)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.celular)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.direccion)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.direccion)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Usuario.correo)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Usuario.correo)
+    </dd>
+    @if (Model.Instructor != null)
+    {
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructor.cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructor.cargo)
+        </dd>
+    }
+</dl>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        @Html.ActionLink("Volver a la lista", "Index")
+    </div>
+}
+
+
